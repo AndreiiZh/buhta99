@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="ru">
+{% load static %}
+
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@1,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,700;1,700&display=swap"
+          rel="stylesheet">
+
+
+    <title>Buhta_99</title>
+
+    <style>
+        .navbar {
+          background-color: #000000;
+        }
+
+        .navbar-nav {
+            font-family: 'Source Serif Pro', serif;
+            font-size: 22px;
+        }
+
+        footer {
+          background-color: #000000;
+          color: #FFFFFF;
+        }
+
+       .navbar-toggler {
+          border-color: rgb(255, 255, 255, 1);
+        }
+
+        .navbar-toggler-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+        }
+
+        .navbar-nav {
+          margin: auto;
+        }
+
+        .logo {
+
+        }
+
+        .nav-item {
+          margin: 15px;
+        }
+
+        .nav-item a:hover {
+          text-decoration: underline;
+          font-size: 24px;
+          color: #FF0000;
+        }
+
+        .nav-item a, .navbar-brand, .nav-contact a {
+          color: #FFFFFF;
+        }
+
+        .nav-contact a:hover {
+          color: #FFFFFF;
+        }
+
+        .after-footer {
+          margin-top: 10px;
+          background-image: url({% static 'img/time_3.jpg' %});
+		  background-size: 100%;
+		  width: 100%
+		}
+
+		.after-footer h2 {
+		  margin-top: 160px;
+		  text-align: center;
+		  width: 100%;
+		  font-size: 96px;
+		  font-weight: 800;
+		  text-transform: uppercase;
+		  color: white;
+
+		}
+
+		.after-footer h3 {
+		  margin-top: 10px;
+		  text-align: center;
+		  width: 100%;
+		  font-size: 36px;
+		  color: #FFFFFF;
+		}
+
+		.img-button {
+		  text-align: center;
+		  margin-top: 120px;
+		  margin-bottom: 50px;
+		}
+
+		.after-footer .button {
+		  width: 360px;
+		  height: 60px;
+		  background-color: #FF0000;
+		  color: #FFFFFF;
+		  border-radius: 60px;
+		  font-size: 22px;
+		  padding-top: 11px;
+		}
+
+		.card-service {
+		  background-image: url({% static 'img/back_foto_card.jpg' %});
+		  background-size: 100%;
+		}
+
+		.card-service h3 {
+		  padding-top: 100px;
+		  color: #FFFFFF;
+		  text-align: center;
+		  width: 100%;
+		}
+
+		.card-button {
+		  padding-top: 60px;
+		  text-align: right;
+		  padding-right: 10px;
+		  padding-bottom: 10px;
+		}
+
+		.card-button button {
+		  background-color: #FF0000;
+		  color: #FFFFFF;
+		  border-radius: 20px;
+		}
+
+		h1 {
+		  text-align: center;
+		  font-family: 'Source Serif Pro', serif;
+		  font-size: 60px;
+		}
+
+		h2 {
+		  font-family: 'IBM Plex Mono', monospace;
+          letter-spacing: 0.15em;
+
+		}
+
+		h3 {
+		  text-transform: uppercase;
+		  font-family: 'Rubik', sans-serif;
+          word-spacing: 0.15em;
+		}
+
+		.img-advantages {
+		  text-align: center;
+		}
+
+		.text-advantages {
+		  margin-top: 25px;
+		  text-align: center;
+		}
+
+		.text-advantages h3 {
+		  font-size: 28px;
+		  color: #FF0000;
+		}
+
+		.img-advantages img {
+		  width: 150px;
+		  height: 150px;
+
+		}
+
+		.social img {
+             -moz-transition: all 0.1s ease-out;
+             -o-transition: all 0.1s ease-out;
+             -webkit-transition: all 0.1s ease-out;
+             width: 30px;
+             height:30px;
+        }
+
+        .social img:hover {
+             -webkit-transform: scale(1.3);
+             -moz-transform: scale(1.3);
+             -o-transform: scale(1.3);
+        }
+
+		.map-wrap iframe {
+            width: 100%;
+        }
+
+        .img-work img {
+           width: 550px;
+           height: 400px;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        .recording-section {
+          margin-top: 30px;
+        }
+
+        .recording-section .form-control:focus {
+            box-shadow: none;
+            border-color: #ced4da;
+        }
+
+        .btn-recording {
+            background-color: #FF0000;
+            border-color: #FF0000;
+            color: #FFFFFF;
+        }
+
+        .cursor_contact {
+            cursor: url({% static 'img/chauffer.png' %});
+        }
+
+        @media only screen and (max-width : 1199px) {
+            .after-footer h2 {
+                margin-top: 90px;
+            }
+            .img-button {
+                margin-top: 30px;
+            }
+        }
+
+        @media only screen and (max-width : 1199px) {
+          .card-button {
+            padding-top: 30px;
+          }
+          .card-service h3 {
+		    font-size: 22px;
+		  }
+		  .img-work img{
+                width: 100%;
+                height: 350px;
+            }
+        }
+
+        @media only screen and (max-width : 991px) {
+            .nav-contact {
+                display: none;
+            }
+            .nav-item {
+                margin: 0px;
+            }
+            .after-footer h2 {
+                margin-top: 80px;
+                font-size: 76px;
+            }
+            .after-footer h3 {
+                font-size: 28px;
+            }
+            .img-advantages img {
+		        width: 120px;
+		        height: 120px;
+		    }
+		    .text-advantages h3 {
+		        font-size: 24px;
+		    }
+            .img-work img{
+                width: auto;
+                height: auto;
+            }
+            .btn_record {
+                padding: 0;
+                margin: auto;
+            }
+        }
+
+        @media only screen and (max-width : 826px) {
+            .after-footer h2 {
+                margin-top: 70px;
+                font-size: 66px;
+            }
+            .after-footer h3 {
+                font-size: 22px;
+            }
+            .after-footer .button {
+		        width: 240px;
+		        height: 50px;
+		        font-size: 18px;
+		    }
+        }
+
+        @media only screen and (max-width : 767px) {
+            .img-advantages img {
+		        width: 110px;
+		        height: 110px;
+		    }
+		    .text-advantages h3 {
+		        font-size: 20px;
+		    }
+		    .btn_record {
+                margin-top: 15px;
+            }
+        }
+
+         @media only screen and (max-width : 733px) {
+            .after-footer h2 {
+                margin-top: 60px;
+                font-size: 56px;
+            }
+            .after-footer h3 {
+                margin-top: 0px;
+                font-size: 18px;
+            }
+            .img-button {
+              text-align: center;
+              margin-top: 10px;
+              margin-bottom: 20px;
+            }
+            .after-footer .button {
+		        width: 200px;
+		        height: 40px;
+		        font-size: 16px;
+		        padding-bottom: 31px;
+		    }
+		    h1 {
+		        font-size: 48px;
+		    }
+		    h4 {
+		        font-size: 18px;
+		    }
+         }
+         @media only screen and (max-width : 524px) {
+            .after-footer h2 {
+                margin-top: 50px;
+                font-size: 46px;
+            }
+         }
+
+
+
+    </style>
+
+</head>
+<body>
+<div class="container-fluid">
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container">
+            <div class="logo">
+                <a href="#"><img src="{% static 'img/buhta_99_logo.png' %}" width="240" height="80"></a>
+            </div>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                    data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#link_service">Наши услуги</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link cursor_contact" href="#link_contact">Контакты</a>
+                    </li>
+                </ul>
+
+            </div>
+            <div class="nav-contact">
+                <div class="col-12">
+                    <a href="tel:+38(050)909-99-88">+38 (050) 909-99-88</a>
+                </div>
+                <div class="col-12">
+                    <a href="tel:+38(066)907-04-94">+38 (066) 907-04-94</a>
+                </div>
+                <div class="col-12">
+                    <a>ул. Кривая Бухта, 99-А</a>
+                </div>
+                <div class="col-12">
+                    <a>г. Запорожье</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</div>
+<section class="one">
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="after-footer">
+                <h2>бухта 99</h2>
+                <h3>detailing center</h3>
+                <div class="img-button">
+                    <a href="#link_registration" class="btn btn-lg button" role="button" aria-pressed="true">Записаться онлайн</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="second service">
+    <div class="container mt-5">
+        <div id="link_service" style="position:relative; top:-130px;"></div>
+        <h1>Наши услуги</h1>
+        <div class="row">
+            <div class="col-lg-4 col-md-6 mt-5">
+                <div class="card card-service">
+                    <h3>Кузовные работы</h3>
+                    <div class="card-button">
+                        <button type="button" class="btn">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-5">
+                <div class="card card-service">
+                    <h3>Слесарные работы</h3>
+                    <div class="card-button">
+                        <button type="button" class="btn">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-5">
+                <div class="card card-service">
+                    <h3>Детейлинг</h3>
+                    <div class="card-button">
+                        <button type="button" class="btn">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-5">
+                <div class="card card-service">
+                    <h3>Техобслуживание</h3>
+                    <div class="card-button">
+                        <button type="button" class="btn">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-5">
+                <div class="card card-service">
+                    <h3>Автолектрик</h3>
+                    <div class="card-button">
+                        <button type="button" class="btn">Подробнее</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6 mt-5">
+                <div class="card card-service">
+                    <h3>Заказ запчастей</h3>
+                    <div class="card-button">
+                        <button type="button" class="btn">Сделать заказ</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="third advantages">
+    <div class="container mt-5">
+        <h1>Наши преимущества</h1>
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 mt-5">
+                <div class="card-advantages">
+                    <div class="img-advantages">
+                        <img src="{% static 'img/sticker_1.png' %}">
+                    </div>
+                    <div class="text-advantages">
+                        <h3>Качество!</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 mt-5">
+                <div class="card-advantages">
+                    <div class="img-advantages">
+                        <img src="{% static 'img/car-speedometer_1.png' %}">
+                    </div>
+                    <div class="text-advantages">
+                        <h3>Сроки!</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 mt-5">
+                <div class="card-advantages">
+                    <div class="img-advantages">
+                        <img src="{% static 'img/wallet_1.png' %}">
+                    </div>
+                    <div class="text-advantages">
+                        <h3>Доступные цены!</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="four work">
+    <div class="container mt-5">
+        <h1>Наши работы</h1>
+        <div class="row">
+            <div class="col-lg-6 mt-5">
+                <div class="img-work">
+                    <img src="{% static 'img/kuzov_1.jpg' %}">
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5">
+                <div class="img-work">
+                    <img src="{% static 'img/img_work_5.jpg' %}" width="550" height="300">
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5">
+                <div class="img-work">
+                    <img src="{% static 'img/img_work_6.jpg' %}" width="550" height="350">
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5">
+                <div class="img-work">
+                    <img src="{% static 'img/img_work_1.jpg' %}" width="550" height="350">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+<section class="recording">
+    <div class="container mt-5">
+        <div id="link_registration" style="position:relative; top:-130px;"></div>
+        <h1>Записаться онлайн</h1>
+        <h4 class="text-center">Заполните форму ниже и мы обязательно свяжемся с вами и запишем на удобное время</h4>
+        <div class="recording-section">
+            <form action= "{% url 'pages:home' %}" method="post">
+                {% csrf_token %}
+                <div class="row">
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="text" class="form-control" placeholder="Имя" name="fname" required>
+                    </div>
+                    <div class="col-lg-5 col-md-5 col-sm-6">
+                        <input type="text" class="form-control" placeholder="Телефон" name="ftel" required>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-4 btn_record">
+                        <button type="submit" class="btn btn-block btn-recording">Отправить</button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</section>
+<section class="five contact">
+    <div class="container mt-5">
+        <div id="link_contact" style="position:relative; top:-130px;"></div>
+        <h1>Мы находимся</h1>
+        <div class="row border mt-5 mb-5">
+            <div class="col-md-4 mt-4">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="location">
+                            <h5>Адрес:</h5>
+                            <a>ул. Кривая Бухта, 99-A</a>
+                            <br>
+                            <a>(Набережная магистраль)</a>
+                            <br>
+                            <a>г. Запорожье</a>
+                        </div>
+                        <div class="phone mt-2">
+                            <h5>Телефон:</h5>
+                            <a href="tel:+380509099988">+38 (050) 909-99-88</a>
+                            <br>
+                            <a href="tel:+380669070494">+38 (066) 907-04-94</a>
+                        </div>
+                        <div class="clock mt-2">
+                            <h5>График работы:</h5>
+                            <p>Пн-Сб: 8.20 - 18.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <div class="map-wrap">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d669.8370443747988!2d35.15831332921099!3d47.81346989869995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40dc5e1a686e1a47%3A0xc7ef889f19a3f2a0!2z0YPQuy4g0JrRgNC40LLQsNGPINCR0YPRhdGC0LAsIDk5LCDQl9Cw0L_QvtGA0L7QttGM0LUsINCX0LDQv9C-0YDQvtC20YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDY5MDAw!5e0!3m2!1sru!2sua!4v1587334966755!5m2!1sru!2sua"
+                            width="550" height="300" frameborder="0" style="border:0;" allowfullscreen=""
+                            aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<footer class="py-4 mt-5">
+    <div class="container">
+        <p class="m-0 text-center text-black">Copyright &copy; Your Website 2020</p>
+    </div>
+    <!-- /.container -->
+</footer>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>
